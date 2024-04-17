@@ -1,0 +1,46 @@
+.wrapper {
+  height: 40rem;
+
+  margin-top: 2rem;
+  padding: 1rem;
+  padding-top: 2rem;
+
+  background: linear-gradient(var(--color-blue-12) 20%, var(--color-gray-1));
+  color: var(--color-gray-1);
+  text-wrap: balance;
+}
+
+.content {
+  max-width: var(--width-max-content);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+
+  margin: 1rem auto;
+}
+
+.description {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.signup {
+  font-size: 1.5rem;
+}
+
+.wrapper a {
+  color: white;
+}
+
+.wrapper a:hover {
+  color: var(--color-blue-3);
+}
+
+@media (min-width: 50rem) {
+  .content {
+    align-items: center;
+    text-align: center;
+  }
+}

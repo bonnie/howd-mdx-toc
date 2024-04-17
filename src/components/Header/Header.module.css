@@ -1,0 +1,30 @@
+.wrapper {
+  position: sticky;
+  top: 0;
+  height: var(--height-header);
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+
+  background-color: var(--color-blue-12);
+  color: var(--color-gray-1);
+}
+
+.logo {
+  color: var(--color-gray-1);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--color-blue-2);
+}
+
+.tagline {
+  font-style: italic;
+}

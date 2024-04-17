@@ -1,0 +1,31 @@
+.wrapper {
+  position: relative;
+
+  padding: 1rem;
+  margin: 0 auto;
+
+  --max-width: min(100%, 40rem);
+}
+
+.blogHero {
+  min-height: 12rem;
+  max-width: var(--max-width);
+}
+
+.blogTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.disclaimer {
+  margin: 0.5rem 0 2rem 0;
+
+  color: var(--color-gray-11);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.content {
+  max-width: var(--max-width);
+}

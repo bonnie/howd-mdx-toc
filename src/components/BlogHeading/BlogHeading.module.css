@@ -1,0 +1,16 @@
+.heading {
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.level2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+}
+
+.level3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
