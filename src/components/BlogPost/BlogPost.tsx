@@ -11,7 +11,13 @@ export type BlogPostParams = {
 };
 
 async function BlogPost({ params }: BlogPostParams) {
-  const { frontmatter, content } = await loadBlogPost(params.postSlug);
+  const { frontmatter, content, headings } = await loadBlogPost(
+    params.postSlug
+  );
+
+  // temporarily print to the console until there's a UI
+  console.log("HEADINGS", headings);
+
   const { title, chatGPTPrompt } = frontmatter;
 
   return (
