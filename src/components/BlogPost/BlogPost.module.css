@@ -12,22 +12,19 @@
   padding: 1rem;
   margin: 0 auto;
 
-  /* commenting this for now... it will come back later */
-  /* --max-width: min(100%, 40rem); */
+  --max-width: min(100%, 44rem);
 }
 
 .blogHero {
   grid-area: hero;
   min-height: 12rem;
-  text-wrap: balance;
-
-  /* commenting this out for now */
-  /* max-width: var(--max-width); */
+  max-width: var(--max-width);
 }
 
 .blogTitle {
   font-size: 1.75rem;
   font-weight: 700;
+  text-wrap: balance;
 }
 
 .disclaimer {
