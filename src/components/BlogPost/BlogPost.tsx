@@ -5,6 +5,7 @@ import { loadBlogPost } from "@/helpers/file-helpers";
 import COMPONENT_MAP from "@/helpers/mdx-components";
 
 import styles from "./BlogPost.module.css";
+import ToC from "./ToC";
 
 export type BlogPostParams = {
   params: { postSlug: string };
@@ -14,9 +15,6 @@ async function BlogPost({ params }: BlogPostParams) {
   const { frontmatter, content, headings } = await loadBlogPost(
     params.postSlug
   );
-
-  // temporarily print to the console until there's a UI
-  console.log("HEADINGS", headings);
 
   const { title, chatGPTPrompt } = frontmatter;
 
@@ -33,7 +31,9 @@ async function BlogPost({ params }: BlogPostParams) {
       <section className={styles.content}>
         <MDXRemote source={content} components={COMPONENT_MAP} />
       </section>
-      {/* TODO: add table of contents */}
+      <aside className={styles.toc}>
+        <ToC headings={headings} />
+      </aside>
     </main>
   );
 }

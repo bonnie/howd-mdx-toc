@@ -1,6 +1,14 @@
 .wrapper {
   position: relative;
 
+  max-width: var(--width-max-content);
+  display: grid;
+  grid-template-areas:
+    "hero hero"
+    "content sidebar";
+  gap: 3rem;
+  grid-template-columns: 1fr 18rem;
+
   padding: 1rem;
   margin: 0 auto;
 
@@ -8,6 +16,7 @@
 }
 
 .blogHero {
+  grid-area: hero;
   min-height: 12rem;
   max-width: var(--max-width);
 }
@@ -27,5 +36,12 @@
 }
 
 .content {
-  max-width: var(--max-width);
+  grid-area: content;
+  /* commenting this out for now */
+  /* max-width: var(--max-width); */
+}
+
+.toc {
+  grid-area: sidebar;
+  align-self: start;
 }
