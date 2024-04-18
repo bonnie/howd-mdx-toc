@@ -43,16 +43,6 @@
   /* max-width: var(--max-width); */
 }
 
-.wrapper {
-  max-width: 65rem;
-  display: grid;
-  grid-template-areas:
-    "hero hero"
-    "content sidebar";
-  gap: 3rem;
-  grid-template-columns: 1fr 18rem;
-}
-
 .toc {
   grid-area: sidebar;
   height: 100%;
