@@ -10,12 +10,12 @@
 .blogHero {
   min-height: 12rem;
   max-width: var(--max-width);
+  text-wrap: balance;
 }
 
 .blogTitle {
   font-size: 1.75rem;
   font-weight: 700;
-  text-wrap: balance;
 }
 
 .disclaimer {
