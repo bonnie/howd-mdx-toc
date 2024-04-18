@@ -46,4 +46,5 @@
 
 .toc {
   grid-area: sidebar;
+  align-self: start;
 }
