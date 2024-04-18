@@ -19,7 +19,8 @@
 .blogHero {
   grid-area: hero;
   min-height: 12rem;
-  max-width: var(--max-width);
+  /* commenting this out for now */
+  /* max-width: var(--max-width); */
 }
 
 .blogTitle {
