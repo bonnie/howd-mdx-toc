@@ -38,7 +38,8 @@
 
 .content {
   grid-area: content;
-  max-width: var(--max-width);
+  /* commenting this out for now */
+  /* max-width: var(--max-width); */
 }
 
 .wrapper {
