@@ -4,18 +4,18 @@
   padding: 1rem;
   margin: 0 auto;
 
-  --max-width: min(100%, 40rem);
+  --max-width: min(100%, 44rem);
 }
 
 .blogHero {
   min-height: 12rem;
   max-width: var(--max-width);
-  text-wrap: balance;
 }
 
 .blogTitle {
   font-size: 1.75rem;
   font-weight: 700;
+  text-wrap: balance;
 }
 
 .disclaimer {
