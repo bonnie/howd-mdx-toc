@@ -1,14 +1,5 @@
 .wrapper {
   position: relative;
-
-  max-width: var(--width-max-content);
-  display: grid;
-  grid-template-areas:
-    "hero hero"
-    "content sidebar";
-  gap: 2.5rem;
-  grid-template-columns: 1fr 18rem;
-
   padding: 1rem;
   margin: 0 auto;
 
@@ -41,6 +32,36 @@
 }
 
 .toc {
-  grid-area: sidebar;
-  align-self: start;
+  display: none;
+}
+
+@media (min-width: 70rem) {
+  .wrapper {
+    max-width: var(--width-max-content);
+    display: grid;
+    grid-template-areas:
+      "hero hero"
+      "content sidebar";
+    gap: 2.5rem;
+    grid-template-columns: 1fr 18rem;
+  }
+
+  .blogHero {
+    grid-area: hero;
+  }
+
+  .content {
+    grid-area: content;
+  }
+
+  .toc {
+    display: revert;
+
+    grid-area: sidebar;
+    align-self: start;
+
+    /* this needs to be 100% so the container for the
+    sticky element is the height of the grid */
+    height: 100%;
+  }
 }

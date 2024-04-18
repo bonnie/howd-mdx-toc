@@ -1,4 +1,7 @@
 .wrapper {
+  position: sticky;
+  top: calc(1rem + var(--height-header));
+
   padding: 1rem;
   background-color: var(--color-blue-3);
 }
