@@ -6,7 +6,7 @@
   grid-template-areas:
     "hero hero"
     "content sidebar";
-  gap: 3rem;
+  gap: 2.5rem;
   grid-template-columns: 1fr 18rem;
 
   padding: 1rem;
@@ -37,8 +37,7 @@
 
 .content {
   grid-area: content;
-  /* commenting this out for now */
-  /* max-width: var(--max-width); */
+  max-width: var(--max-width);
 }
 
 .toc {
