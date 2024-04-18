@@ -1,0 +1,32 @@
+import clsx from "clsx";
+import React from "react";
+
+import { MdxHeading } from "@/helpers/headings-helpers";
+
+import styles from "./ToC.module.css";
+
+type ToCProps = { headings: Array<MdxHeading> };
+
+function ToC({ headings }: ToCProps) {
+  return (
+    <div className={styles.wrapper}>
+      <h2 className={styles.title}>Contents</h2>
+      <nav className={styles.nav}>
+        {headings.map(({ title, level }) => {
+          return (
+            // a `span` for now. Will become an `a` later.
+            <span
+              // this key assumes no duplicate heading titles
+              key={title}
+              className={clsx(styles.heading, styles[`heading${level}`])}
+            >
+              {title}
+            </span>
+          );
+        })}
+      </nav>
+    </div>
+  );
+}
+
+export default ToC;

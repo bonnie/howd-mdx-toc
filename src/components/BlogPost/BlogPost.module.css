@@ -1,13 +1,23 @@
 .wrapper {
   position: relative;
 
+  max-width: var(--width-max-content);
+  display: grid;
+  grid-template-areas:
+    "hero hero"
+    "content sidebar";
+  gap: 3rem;
+  grid-template-columns: 1fr 18rem;
+
   padding: 1rem;
   margin: 0 auto;
 
-  --max-width: min(100%, 40rem);
+  /* commenting this for now... it will come back later */
+  /* --max-width: min(100%, 40rem); */
 }
 
 .blogHero {
+  grid-area: hero;
   min-height: 12rem;
   max-width: var(--max-width);
 }
@@ -21,11 +31,29 @@
 .disclaimer {
   margin: 0.5rem 0 2rem 0;
 
-  color: var(--color-gray-11);
   font-style: italic;
+  color: var(--color-gray-11);
   font-weight: 300;
 }
 
 .content {
+  grid-area: content;
   max-width: var(--max-width);
+}
+
+.wrapper {
+  max-width: 65rem;
+  display: grid;
+  grid-template-areas:
+    "hero hero"
+    "content sidebar";
+  gap: 3rem;
+  grid-template-columns: 1fr 18rem;
+}
+
+.toc {
+  grid-area: sidebar;
+  height: 100%;
+  display: revert;
+  position: relative;
 }
