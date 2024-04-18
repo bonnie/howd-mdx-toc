@@ -31,8 +31,8 @@
 .disclaimer {
   margin: 0.5rem 0 2rem 0;
 
-  font-style: italic;
   color: var(--color-gray-11);
+  font-style: italic;
   font-weight: 300;
 }
 
