@@ -46,7 +46,4 @@
 
 .toc {
   grid-area: sidebar;
-  height: 100%;
-  display: revert;
-  position: relative;
 }
