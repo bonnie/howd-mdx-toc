@@ -1,11 +1,12 @@
 import clsx from "clsx";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import React from "react";
 
-import { MdxHeading } from "@/helpers/headings-helpers";
+import { HeadingData } from "@/helpers/headings-helpers";
 
 import styles from "./ToC.module.css";
 
-type ToCProps = { headings: Array<MdxHeading> };
+type ToCProps = { headings: Array<HeadingData> };
 
 function ToC({ headings }: ToCProps) {
   return (
@@ -20,7 +21,7 @@ function ToC({ headings }: ToCProps) {
               key={title}
               className={clsx(styles.heading, styles[`heading${level}`])}
             >
-              {title}
+              <MDXRemote source={title} />
             </span>
           );
         })}
