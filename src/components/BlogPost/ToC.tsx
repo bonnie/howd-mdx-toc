@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import React from "react";
 
 import { MdxHeading } from "@/helpers/headings-helpers";
@@ -20,7 +21,7 @@ function ToC({ headings }: ToCProps) {
               key={title}
               className={clsx(styles.heading, styles[`heading${level}`])}
             >
-              {title}
+              <MDXRemote source={title} />
             </span>
           );
         })}
