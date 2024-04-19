@@ -1,11 +1,11 @@
-export interface MdxHeading {
+export interface HeadingData {
   title: string;
   level: number;
 }
 
 // adapted from https://github.com/kaf-lamed-beyt/extract-md-headings/blob/master/src/index.ts
-export function extractMdxHeadings(mdxContent: string): Array<MdxHeading> {
-  const headings: Array<MdxHeading> = [];
+export function extractMdxHeadings(mdxContent: string): Array<HeadingData> {
+  const headings: Array<HeadingData> = [];
 
   // match the `#` syntax for headings
   const headingMatcher = /^(#+)\s(.+)$/gm;
