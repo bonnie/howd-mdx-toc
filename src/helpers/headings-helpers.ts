@@ -1,16 +1,9 @@
-// adapted from https://github.com/kaf-lamed-beyt/extract-md-headings/blob/master/src/index.ts
 export interface MdxHeading {
   title: string;
   level: number;
 }
 
-/**
- * @description gets all the heading-text from a markdown file
- * @param {string} filePath  a valid relative path, as a string to where the markdown file is located.
- * @returns an array of objects containing the heading information like the `id`, `title`, `slug`, and `level`
- * @see [Documentation](https://github.com/kaf-lamed-beyt/extract-md-headings#usage)
- */
-
+// adapted from https://github.com/kaf-lamed-beyt/extract-md-headings/blob/master/src/index.ts
 export function extractMdxHeadings(mdxContent: string): Array<MdxHeading> {
   const headings: Array<MdxHeading> = [];
 
