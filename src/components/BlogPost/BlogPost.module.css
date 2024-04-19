@@ -30,7 +30,6 @@
 }
 
 aside.toc {
-<<<<<<< HEAD
   display: none;
 }
 
@@ -62,8 +61,4 @@ aside.toc {
     sticky element is the height of the grid */
     height: 100%;
   }
-=======
-  grid-area: sidebar;
-  align-self: start;
->>>>>>> solution-workshop-2
 }
