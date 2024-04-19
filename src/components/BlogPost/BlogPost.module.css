@@ -7,7 +7,6 @@
 }
 
 .blogHero {
-  grid-area: hero;
   min-height: 12rem;
   max-width: var(--max-width);
 }
@@ -27,7 +26,6 @@
 }
 
 .content {
-  grid-area: content;
   max-width: var(--max-width);
 }
 
