@@ -39,7 +39,7 @@
   max-width: var(--max-width);
 }
 
-.toc {
+aside.toc {
   grid-area: sidebar;
   align-self: start;
 }
