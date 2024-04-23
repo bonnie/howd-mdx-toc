@@ -1,8 +1,6 @@
 import clsx from "clsx";
 import React from "react";
 
-import { headingToId } from "@/helpers/headings-helpers";
-
 import styles from "./BlogHeading.module.css";
 
 export type BlogHeadingProps = {
@@ -15,28 +13,16 @@ function BlogHeading({
   children,
   ...delegated
 }: BlogHeadingProps) {
-  const id = headingToId(children);
+  const Tag: "h2" | "h3" = `h${level}`;
 
-  if (level === 2)
-    return (
-      <h2
-        className={clsx(className, styles.level2, styles.heading)}
-        id={id}
-        {...delegated}
-      >
-        {children}
-      </h2>
-    );
-  if (level === 3)
-    return (
-      <h3
-        className={clsx(styles.level3, styles.heading)}
-        id={id}
-        {...delegated}
-      >
-        {children}
-      </h3>
-    );
+  return (
+    <Tag
+      className={clsx(className, styles[`level${level}`], styles.heading)}
+      {...delegated}
+    >
+      {children}
+    </Tag>
+  );
 }
 
 export default BlogHeading;
