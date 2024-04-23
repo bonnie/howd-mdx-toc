@@ -21,9 +21,11 @@
 }
 
 .heading2 {
+  composes: heading;
   font-weight: 600;
 }
 
 .heading3 {
+  composes: heading;
   margin-left: 0.75rem;
 }

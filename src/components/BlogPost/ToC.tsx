@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import React from "react";
 
@@ -19,7 +18,7 @@ function ToC({ headings }: ToCProps) {
             <span
               // this key assumes no duplicate heading titles
               key={title}
-              className={clsx(styles.heading, styles[`heading${level}`])}
+              className={styles[`heading${level}`]}
             >
               <MDXRemote source={title} />
             </span>
