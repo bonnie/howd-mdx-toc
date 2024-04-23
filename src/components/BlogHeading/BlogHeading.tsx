@@ -16,10 +16,7 @@ function BlogHeading({
   const Tag: "h2" | "h3" = `h${level}`;
 
   return (
-    <Tag
-      className={clsx(className, styles[`level${level}`], styles.heading)}
-      {...delegated}
-    >
+    <Tag className={clsx(className, styles[`level${level}`])} {...delegated}>
       {children}
     </Tag>
   );
