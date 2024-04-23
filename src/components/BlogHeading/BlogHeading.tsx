@@ -13,21 +13,16 @@ function BlogHeading({
   children,
   ...delegated
 }: BlogHeadingProps) {
-  if (level === 2)
-    return (
-      <h2
-        className={clsx(className, styles.level2, styles.heading)}
-        {...delegated}
-      >
-        {children}
-      </h2>
-    );
-  if (level === 3)
-    return (
-      <h3 className={clsx(styles.level3, styles.heading)} {...delegated}>
-        {children}
-      </h3>
-    );
+  const Tag: "h2" | "h3" = `h${level}`;
+
+  return (
+    <Tag
+      className={clsx(className, styles[`level${level}`], styles.heading)}
+      {...delegated}
+    >
+      {children}
+    </Tag>
+  );
 }
 
 export default BlogHeading;
