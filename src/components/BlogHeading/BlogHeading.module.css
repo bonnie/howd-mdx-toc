@@ -1,6 +1,10 @@
 .heading {
   font-weight: 600;
   line-height: 1.1;
+
+  /* to keep the heading from disappearing below the
+     header on scroll */
+  scroll-margin-top: calc(var(--height-header) + 1rem);
 }
 
 .heading2 {
