@@ -3,14 +3,14 @@
   line-height: 1.1;
 }
 
-.level2 {
+.heading2 {
   composes: heading;
   margin-top: 2.5rem;
   margin-bottom: 1.2rem;
   font-size: 1.5rem;
 }
 
-.level3 {
+.heading3 {
   composes: heading;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
