@@ -1,7 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import React from "react";
 
-import { HeadingData } from "@/helpers/headings-helpers";
+import { HeadingData, headingToId } from "@/helpers/headings-helpers";
 
 import styles from "./ToC.module.css";
 
@@ -12,16 +12,17 @@ function ToC({ headings }: ToCProps) {
     <div className={styles.wrapper}>
       <h2 className={styles.title}>Contents</h2>
       <nav className={styles.nav}>
-        {headings.map(({ title, level }) => {
+        {headings.map(({ id, title, level }) => {
           return (
             // a `span` for now. Will become an `a` later.
-            <span
+            <a
               // this key assumes no duplicate heading titles
-              key={title}
+              key={id}
+              href={`#${id}`}
               className={styles[`heading${level}`]}
             >
               <MDXRemote source={title} />
-            </span>
+            </a>
           );
         })}
       </nav>
