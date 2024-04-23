@@ -1,3 +1,13 @@
+import reactToText from "react-to-text";
+
+export const headingToId = (heading: string | React.ReactNode) => {
+  const headingText = reactToText(heading);
+  return headingText
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-");
+};
+
 export interface HeadingData {
   title: string;
   level: number;
