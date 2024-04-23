@@ -20,7 +20,7 @@ function BlogHeading({
 
   return (
     <Tag
-      className={clsx(className, styles[`level${level}`], styles.heading)}
+      className={clsx(className, styles[`heading${level}`])}
       id={id}
       {...delegated}
     >
