@@ -14,7 +14,6 @@ function ToC({ headings }: ToCProps) {
       <nav className={styles.nav}>
         {headings.map(({ id, title, level }) => {
           return (
-            // a `span` for now. Will become an `a` later.
             <a
               // this key assumes no duplicate heading titles
               key={id}
