@@ -1,3 +1,13 @@
+import reactToText from "react-to-text";
+
+export const headingToId = (heading: string | React.ReactNode) => {
+  const headingText = reactToText(heading);
+  return headingText
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-");
+};
+
 export interface HeadingData {
   title: string;
   level: number;
@@ -6,6 +16,10 @@ export interface HeadingData {
 // adapted from https://github.com/kaf-lamed-beyt/extract-md-headings/blob/master/src/index.ts
 export function extractMdxHeadings(mdxContent: string): Array<HeadingData> {
   const headings: Array<HeadingData> = [];
+
+  // track how many times each heading has appeared,
+  // for unique heading ids
+  const idCounts: Record<string, number> = {};
 
   // match the `#` syntax for headings
   const headingMatcher = /^(#+)\s(.+)$/gm;

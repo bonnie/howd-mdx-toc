@@ -1,7 +1,7 @@
-"use client";
-
 import clsx from "clsx";
 import React from "react";
+
+import { headingToId } from "@/helpers/headings-helpers";
 
 import styles from "./BlogHeading.module.css";
 
@@ -15,10 +15,13 @@ function BlogHeading({
   children,
   ...delegated
 }: BlogHeadingProps) {
+  const id = headingToId(children);
+
   if (level === 2)
     return (
       <h2
         className={clsx(className, styles.level2, styles.heading)}
+        id={id}
         {...delegated}
       >
         {children}
@@ -26,7 +29,11 @@ function BlogHeading({
     );
   if (level === 3)
     return (
-      <h3 className={clsx(styles.level3, styles.heading)} {...delegated}>
+      <h3
+        className={clsx(styles.level3, styles.heading)}
+        id={id}
+        {...delegated}
+      >
         {children}
       </h3>
     );
