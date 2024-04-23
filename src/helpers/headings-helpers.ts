@@ -17,10 +17,6 @@ export interface HeadingData {
 export function extractMdxHeadings(mdxContent: string): Array<HeadingData> {
   const headings: Array<HeadingData> = [];
 
-  // track how many times each heading has appeared,
-  // for unique heading ids
-  const idCounts: Record<string, number> = {};
-
   // match the `#` syntax for headings
   const headingMatcher = /^(#+)\s(.+)$/gm;
 
