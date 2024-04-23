@@ -32,3 +32,7 @@
   composes: heading;
   margin-left: 0.75rem;
 }
+
+.wrapper a {
+  text-decoration: none;
+}
