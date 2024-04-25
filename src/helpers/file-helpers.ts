@@ -6,6 +6,7 @@ import path from "path";
 import React from "react";
 
 const BLOG_POST_DIR_PATH = "/content";
+import { extractMdxHeadings } from "./headings-helpers";
 
 export type BlogPostMetadata = {
   title: string;
@@ -15,8 +16,9 @@ export type BlogPostMetadata = {
 export const loadBlogPost = React.cache(async (slug: string) => {
   const rawContent = await readFile(`${BLOG_POST_DIR_PATH}/${slug}.mdx`);
   const { data: frontmatter, content } = matter(rawContent);
+  const headings = extractMdxHeadings(content);
 
-  return { frontmatter, content };
+  return { frontmatter, content, headings };
 });
 
 export const getBlogPostList = async () => {
